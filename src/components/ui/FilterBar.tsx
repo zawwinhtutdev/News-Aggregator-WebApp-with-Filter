@@ -23,10 +23,10 @@ export default function FilterBar({
             onClick={() => onCategoryChange(category.id)}
             className={`
               flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors
-              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+              focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2
               ${
                 activeCategory === category.id
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-sky-500 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }
             `}

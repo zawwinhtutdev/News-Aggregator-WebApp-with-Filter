@@ -41,8 +41,8 @@ export default function SearchBar({
           placeholder={placeholder}
           className={`
             w-full px-4 py-2 pl-10 pr-10 text-gray-900 bg-white border border-gray-300 rounded-lg
-            focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors
-            ${isFocused ? 'ring-2 ring-blue-500 border-blue-500' : ''}
+            focus:ring-2 focus:ring-sky-400 focus:border-sky-400 outline-none transition-colors
+            ${isFocused ? 'ring-2 ring-sky-400 border-sky-400' : ''}
           `}
           aria-label="Search news articles"
         />

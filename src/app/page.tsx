@@ -127,7 +127,7 @@ export default function HomePage() {
               {searchQuery && (
                 <button
                   onClick={clearSearch}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition-colors"
                 >
                   Clear Search
                 </button>
@@ -175,7 +175,7 @@ export default function HomePage() {
                 href="https://newsapi.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 font-medium"
+                className="text-sky-600 hover:text-sky-700 font-medium"
               >
                 NewsAPI
               </a>
