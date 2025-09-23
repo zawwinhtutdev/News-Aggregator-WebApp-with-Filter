@@ -98,7 +98,7 @@ export default function HomePage() {
         )}
 
         {/* Empty State */}
-        {!isLoading && !error && articles.length === 0 && (
+        {!isLoading && !error && (!articles || articles.length === 0) && (
           <div className="text-center py-12">
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 max-w-md mx-auto">
               <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 bg-gray-100 rounded-full">
@@ -137,7 +137,7 @@ export default function HomePage() {
         )}
 
         {/* Articles Grid */}
-        {!isLoading && !error && articles.length > 0 && (
+        {!isLoading && !error && articles && articles.length > 0 && (
           <div className="space-y-6">
             {/* Results Info */}
             <div className="text-center text-gray-600">
@@ -152,7 +152,7 @@ export default function HomePage() {
 
             {/* Articles Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {articles.map((article, index) => (
+              {(articles || []).map((article, index) => (
                 <NewsCard
                   key={article.id}
                   article={article}

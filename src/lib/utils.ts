@@ -1,7 +1,12 @@
 import { Article } from './types';
 
+let idCounter = 0;
+
 export const generateArticleId = (url: string): string => {
-  return btoa(url).replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
+  // Create a unique ID by combining URL hash with an incrementing counter
+  const urlHash = btoa(url).replace(/[^a-zA-Z0-9]/g, '');
+  const uniqueId = `${urlHash.substring(0, 12)}_${++idCounter}`;
+  return uniqueId;
 };
 
 export const formatDate = (dateString: string): string => {

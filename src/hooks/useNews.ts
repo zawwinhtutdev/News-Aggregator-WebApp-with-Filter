@@ -38,10 +38,11 @@ export function useNews(): UseNewsReturn {
         throw new Error(data.error || 'Failed to fetch news');
       }
 
-      setArticles(data.data.articles);
+      setArticles(data.data.articles || []);
       setFilterState(prev => ({ ...prev, isLoading: false }));
     } catch (error) {
       console.error('Error fetching news:', error);
+      setArticles([]); // Ensure articles is always an array
       setFilterState(prev => ({
         ...prev,
         isLoading: false,
